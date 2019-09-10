@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Wikium ICO</title>
+
+    <meta name="theme-color" content="##6039AA"/>
+    <link rel="shortcut icon" href="https://wikium.ru/img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" href="https://wikium.ru/img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://wikium.ru/img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://wikium.ru/img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://wikium.ru/img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://wikium.ru/img/favicon/favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wikium.ru/img/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wikium.ru/img/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://wikium.ru/img/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://wikium.ru/img/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://wikium.ru/img/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://wikium.ru/img/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://wikium.ru/img/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://wikium.ru/img/favicon/apple-touch-icon-152x152.png" />
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" 
+            integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+
+<body>
+    <nav id="nav" class="navbar fixed-top navbar-expand-md navbar-dark">
+        <a class="navbar-brand p-0" href="#">
+            <img class="logo pb-1" src="../images/header-logo--international.svg" alt="Wikium">
+        </a>
+        <ul class="navbar-nav order-0 order-md-1 ml-auto ml-md-3 mr-md-3 mr-1">
+            <li class="nav-item dropdown d-inline-block">
+                <a class="btn btn-outline-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="fas fa-globe"></i>
+                    CH
+                </a>
+                <div class="dropdown-menu dropdown-menu-right w-100" style="min-width:0;" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="../">RU</a>
+                    <a class="dropdown-item" href="../EN/">ENG</a>
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler now" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto order-md-1 mt-2 mt-md-0">
+                <li class="nav-item">
+                    <a class="nav-link text-right" href="https://wikium.ru/">项目网站</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-right" href="#">白皮书</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item d-flex">
+                    <a class="btn btn-primary ml-auto mr-1" href="#invest">投资</a>
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#CalcModalCenter">
+                        <i class="fas fa-calculator"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="head" class="header" >
+        <div class="container text-center" data-aos="fade-up">
+            <h1 class="title light o-50">平台</h1>
+            <h1 class="title bold">用于大脑锻炼和发展</h1>
+            <div class="g-grid my-5">
+                <div class="g-bg"></div>
+                <div class="g-info">
+                    <div class="row h-100">
+                        <div class="col col-6 d-flex flex-column justify-content-center">
+                            <h5 class="font-weight-light">收集的总数</h5>
+                            <h2>$<span id="usdCollected">0</span></h2>
+                        </div>
+                        <div class="col col-6 d-flex flex-column justify-content-center">
+                            <h5 class="font-weight-light">令牌价格 (WKT)</h5>
+                            <h2>$<span id="currentPrice">0.00</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-discounts">
+                    <h5 class="font-weight-light">折扣</h5>
+                    <table class="table table-sm table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">购买金额</th>
+                                <th scope="col">折扣</th>
+                                <th scope="col">令牌价格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>$100 000</td>
+                                <td>30%</td>
+                                <td>$<span id="discount30">0.35</span></td>
+                            </tr>
+                            <tr>
+                                <td>$10 000</td>
+                                <td>20%</td>
+                                <td>$<span id="discount20">0.40</span></td>
+                            </tr>
+                            <tr>
+                                <td>$1 000</td>
+                                <td>10%</td>
+                                <td>$<span id="discount10">0.45</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+                <div class="g-progress progress mt-4">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" 
+                    role="progressbar" style="width: 0%" data-aos="fade-right" data-aos-delay="250"
+                    id="usdProgress" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="g-text mt-2 mb-3">
+                    <div class="row text-right">
+                        <div class="col col-3" data-aos="fade-right" data-aos-delay="50">
+                            <div class="content">
+                                <p class="font-weight-bold mb-1 pt-1">闵。 量</p>
+                                <ul>
+                                    <li>新的模拟器</li>
+                                    <li>软技能培训</li>
+                                    <li>专业调整</li>
+                                    <li>进入欧洲市场和美国</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-3" data-aos="fade-right" data-aos-delay="100">
+                            <div class="content">
+                                <p class="font-weight-bold mb-1 pt-1">心理健康</p>
+                                <ul>
+                                    <li>移动应用</li>
+                                    <li>大脑健身教练</li>
+                                    <li>培训国家 (NeuroWikium)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-3" data-aos="fade-right" data-aos-delay="150">
+                            <div class="content">
+                                <p class="font-weight-bold mb-1 pt-1">神经科学</p>
+                                <ul>
+                                    <li>我们自己的神经接口</li>
+                                    <li>离线大脑健身中心</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col col-3" data-aos="fade-right" data-aos-delay="200">
+                            <div class="content">
+                                <p class="font-weight-bold mb-1 pt-1">社会</p>
+                                <ul>
+                                    <li>帮助患有ADHD的儿童</li>
+                                    <li>中风后帮助恢复</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-button mt-3">
+                    <a class="w-btn" href="#invest" tabindex="0">投资</a>
+                </div>
+                <div class="g-line" data-aos="fade-up">
+                    <div class="f-box">
+                        <div class="f-row">
+                            <span>1WTK = $<span id="ebPrice">0.4</span></span>
+                            <span>1WTK = $<span id="preIcoPrice">0.5</span></span>
+                            <span>1WTK = $<span id="icoPrice">0.6</span></span>
+                        </div>
+                        <div class="progPoint" id="timeProgress" style="width: 0%"
+                             data-aos="fade-right">
+                            <i class="fas fa-map-marker-alt fa-2x fa-fw"></i>
+                        </div>
+                        <div class="f-row-circles">
+                            <div data-toggle="tooltip" data-placement="bottom" id="startDate"></div>
+                            <div data-toggle="tooltip" data-placement="bottom" id="preIcoDate"></div>
+                            <div data-toggle="tooltip" data-placement="bottom" id="icoDate"></div>
+                            <div data-toggle="tooltip" data-placement="bottom" id="endDate"></div>
+                        </div>
+                        <div class="f-row">
+                            <span>早鸟</span>
+                            <span>Pre-ICO</span>
+                            <span>ICO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="g-timer o-50" data-aos="fade-up">
+                    <div class="timer font-weight-light">
+                        <div class="timer__title" id="timerHeader">涨价之前：</div>
+                        <div class="timer__block" >
+                            <div id="timerNumber" class="d-flex justify-content-center" >
+                                <div class="d-flex flex-column m-1">
+                                    <h3 id="days" class="font-weight-bold m-0" >0</h3>
+                                    <span >天</span>
+                                </div>
+                                <div class="d-flex flex-column m-1">
+                                    <h3 id="hours" class="font-weight-bold m-0" >0</h3>
+                                    <span >小时</span>
+                                </div>
+                                <div class="d-flex flex-column m-1">
+                                    <h3 id="minutes" class="font-weight-bold m-0" >0</h3>
+                                    <span >分钟</span>
+                                </div>
+                                <div class="d-flex flex-column m-1">
+                                    <h3 id="seconds" class="font-weight-bold m-0" >0</h3>
+                                    <span >秒</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg"></div>
+    </header>
+    <main>
+        <section class="company-section container-fluid py-5" data-aos="fade-down">
+            <div class="section-title d-flex justify-content-center text-center">
+                <h1>Invest in a successful business</h1>
+            </div>
+            <div class="container">
+                <div class="row my-4 pt-3" data-aos="fade-up">
+                    <div class="col col-12 col-lg-6 w-100 h-100">
+                        <canvas id="incomeChart" width="600" height="300"></canvas>
+                    </div>
+                    <div class="col col-12 col-lg-6 d-flex flex-column">
+                        <h4 class="mb-2">Revenue</h4>
+                        <p>
+                            Wikium - dynamically developing Russian company in the field of cognitive training with high revenue growth. 
+                            The company shows stable growth, last year revenues increased 3 times.
+                        </p>
+                    </div>
+                </div>
+                <div class="row my-4" data-aos="fade-up">
+                    <div class="col col-12 col-lg-6 w-100 h-100">
+                        <canvas id="usersChart" width="600" height="300"></canvas>
+                    </div>
+                    <div class="col col-12 col-lg-6 d-flex flex-column">
+                        <h4 class="mb-2">Client base</h4>
+                        <p>
+                            The demand and popularity of online platforms Wikium among Russian-speaking, English-speaking and Spanish-speaking customers is growing rapidly. 
+                            Now Wikium is in the TOP 2 web services with cognitive training with monthly attendance 5 000 000 people. 
+                            (4 years audience has grown by 20 times).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center text-center" data-aos="fade-down">
+                <a class="w-btn" href="#invest" tabindex="0">PARTICIPATE</a>
+            </div>
+        </section>
+
+        <section class="roadmap-section container-fluid">
+            <div class="roadmap-title d-flex justify-content-center" data-aos="fade-down">
+                <h1>Roadmap</h1>
+            </div>
+            <div class="row example-split d-flex justify-content-center">
+                <div class="split-wrapper">
+                    <ul class="timeline-new timeline-split" data-aos="zoom-in-up">
+                        <li class="timeline-item period period-start">
+                            <div class="timeline-info open-sans-semibold"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content w-text-white">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2013</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>2-3, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Основание</div>
+                                <ul>
+                                    <li>Проект был основан Сергеем Беланом в октябре 2013</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2014</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1-4, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Первые шаги</div>
+                                <ul>
+                                    <li>Выпуск из акселерационной программы ФРИИ (Крупнейшего венчурного фонда Европы)</li>
+                                    <li>Инвестиции в 300.000$ долларов на раунде Seed от ФРИИ и партнера Артема Овечкина</li>
+                                    <li>Номинант на лучший интернет «Стартап года 2014»</li>
+                                    <li>Лауреат «облачного гранта» Microsoft Azure в размере $120 000</li>
+                                    <li>Онлайн платформа «Викиум» включает в себя 40 когнитивных игр-тренажеров</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2015</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1-4, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Признание значимости проекта</div>
+                                <ul>
+                                    <li>Финалист конкурса проектов направления «Молодые профессионалы» Агентства Стратегических Инициатив
+                                    </li>
+                                    <li>ТОП-5 short-листа «Премии Рунета 2015» в номинации «Наука и образование»</li>
+                                    <li>На платформу «Викиум» Добавлены специализированные курсы</li>
+                                    <li>Создали первый в России и СНГ нейротренажер с применением игрового контроллера и системы БОС ЭЭГ
+                                    <br>(биологическая обратная связь по принципу электроэнцефолограммы)
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2016</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1-4, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Премии и номинации</div>
+                                <ul>
+                                    <li>ТОП-10 short-листа «Премии Рунета 2016» в номинации «Наука и образование»</li>
+                                    <li>Финалист совместного конкурса ИД Коммерсантъ и банка ВТБ24 «Ниша на миллиард» в категории
+                                        «Lifestyle — сервисы и услуги»</li>
+                                    <li>Масштабирование онлайн платформы «Викиум» на рынки стран СНГ</li>
+                                    <li>Разработана линейка нейротренажеров по принципу БОС ЭЭГ, айтрекинга, VR  состоящая из 7 тренажеров</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2017</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1-2, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Крупные инвестиции в проект</div>
+                                <ul>
+                                    <li>Компания привлекла 2 млн. дол. США от банковской процессинговой системы «Рукард».</li>
+                                    <li>Старт экспансии на международные рынки</li>
+                                    <li>Финалист телешоу технологических и инновационных стартап проектов «Идея на миллион»  </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>3-4, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Подтверждение успешности</div>
+                                <ul>
+                                    <li>Пост-инвестиционная оценка компании составляет $5 млн</li>
+                                    <li>Компания показывает 4-х кратный рост за 2-е полугодие 2017</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <p class="timeline-title open-sans-bold w-text-white flag">2018</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info">
+                                <span>1-3, квартал</span>
+                            </div>
+                            <div class="timeline-marker">
+                                <div class="before"></div>
+                                <div class="after"></div>
+                            </div>
+                            <div class="timeline-content" data-aos="zoom-in-up">
+                                <div class="timeline-title open-sans-semibold">Выход на мировые рынки</div>
+                                <ul>
+                                    <li>Проведение ICO</li>
+                                    <li>Выход на англоязычные страны и рынок Китая</li>
+                                    <li>Запуск программы развивающей ключевые когнитивные навыки для 170 профессий</li>
+                                    <li>Запуск брейк-фитнес направления с применением нейротехнологий 
+                                        и нейроинтерфейсов, VR и itracking</li>
+                                </ul>
+                            </div>
+                        </li>                       
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section container-fluid " data-aos="fade-down">
+            <div class="team-title text-center open-sans-bold">
+                <h1>Наша команда и её лидеры</h1>
+            </div>
+            <div class="container">
+                <div class="row members">
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="photo">
+                            <img src="../images/team/belan_300_bw.jpg" alt="Sergey Belan">
+                            <a href="https://www.linkedin.com/in/sergey-belan-aa868584/" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-linkedin.800e16a6.svg" alt="Linkedin">
+                            </a>
+                            <a href="https://www.facebook.com/sergey.belan.940?pnref=friends.search" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Сергей Белан</div>
+                        <div class="position">Основатель, Генеральный директор ГК «Викиум»</div>
+                        <div class="description text-left">
+                            Руководит всеми операциями и принимает стратегические решения для развития компании. Внес значительный вклад в становление
+                            и популяризацию нейротехнологий, входил в первый состав рабочей группы «Нейронет» по формированию
+                            дорожной карты Национальной технологической инициативы (НТИ).
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="photo">
+                            <img src="../images/team/kolzikov_300_bw.jpg" alt="Pavel Kolzhikov">
+                            <a href="https://www.linkedin.com/in/%D0%BF%D0%B0%D0%B2%D0%B5%D0%BB-%D0%BA%D0%BE%D0%BB%D0%B6%D0%B8%D0%BA%D0%BE%D0%B2-058a6155/"
+                                target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-linkedin.800e16a6.svg" alt="Linkedin">
+                            </a>
+                            <a href="https://www.facebook.com/kolzhikov" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Павел Колжиков</div>
+                        <div class="position">технический директор</div>
+                        <div class="description text-left">
+                            Выстраивает процессы разработки и интеграции программного продукта. Сформировал команду IT блока и разработал систему мотивации
+                            сотрудников. Участвовал в проектировании ключевых модулей депозитарной системы. Занимал ведущую
+                            роль в организации процесса внедрения различных практик DevOps среди всех проектов организации.
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div class="photo">
+                            <img src="../images/team/lagutinskiy_300_bw.jpg" alt="Denis Lagutinskiy">
+                            <a href="https://www.facebook.com/denis.lagutinskiy?pnref=friends.search" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Денис Лагутинский</div>
+                        <div class="position">директор по развитию бизнеса</div>
+                        <div class="description text-left">
+                            Управляет прямыми продажами и развитием отношений с партнерами, курирует процесс создания и вывода на рынок новых продуктов
+                            для В2В клиентов, отвечает за качественную и эффективную коммуникацию с партнерами и В2В клиентами.
+
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="photo">
+                            <img src="../images/team/kustova_300_bw.jpg" alt="Anna Kustova">
+                            <a href="https://www.facebook.com/aakustova?pnref=lhc.unseen" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Анна Кустова</div>
+                        <div class="position">операционный директор</div>
+                        <div class="description text-left">
+                            Осуществляет операционное управление компанией. Определяет стратегию развития продукта и маркетинга. Курирует внешние проекты.
+                            Является победителем конкурса Правительства г. Москвы «Менеджер года – 2008» в номинации «Менеджер
+                            структурного подразделения» и победителем конкурса Консульства и Торговой Палаты Швеции (делегация
+                            от РФ – 4 человека), обладатель гранта на развитие бизнес-отношений с энергетическими компаниями
+                            Швеции.
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="photo">
+                            <img src="../images/team/lalenkov_300_bw.jpg" alt="Sergey Lyalenkov">
+                            <a href="https://www.facebook.com/lyalenkov?pnref=friends.search" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Сергей Ляленков</div>
+                        <div class="position">директор по маркетингу</div>
+                        <div class="description text-left">
+                            Более 10 лет в онлайн-маркетинге. Реализовал крупную english learning партнёрскую программу в РФ с LinguaLeo. Вывел мобильное
+                            приложение в общий топ и топ по категории. За время работы в Викиум увеличил ежемесячную выручку
+                            и количество регистраций в 10 раз, вывел продукт на международные рынки.
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="300">
+                        <div class="photo">
+                            <img src="../images/team/perzeva_300_bw.jpg" alt="Olga Perzeva">
+                            <a href="https://www.linkedin.com/in/olga-soskunova-341091a0/" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-linkedin.800e16a6.svg" alt="Linkedin">
+                            </a>
+                            <a href="https://www.facebook.com/olga.soskunova" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Ольга Перцева</div>
+                        <div class="position">PR-директор</div>
+                        <div class="description text-left">
+                            Осуществляет продвижение компании, повышение узнаваемости бренда, лояльности существующих клиентов (отстраненность от конкурентов).
+                            Работает над стратегией популяризации и продвижения нейронаправления компании. Прошла акселерационную
+                            программу во ФРИИ.
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="photo">
+                            <img src="../images/team/chuklyaev_300_bw.jpg" alt="Evgeny Chuklyaev">
+                            <a href="https://www.facebook.com/chupeckij?pnref=friends.search" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Артем Генкин</div>
+                        <div class="position">менеджер по продукту</div>
+                        <div class="description text-left">
+                            Занимается проектированием функциональности продукта, анализом текущей функциональности системы на предмет развития и повышения
+                            удобства. Разрабатывает новые продукты компании.
+                        </div>
+                    </div>
+                    <div class="member col-12 col-md-6 col-lg-4 mb-5" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="photo">
+                            <img src="../images/team/francuzov_300_bw.jpg" alt="Nikolay Francuzov">
+                            <a href="https://www.facebook.com/nicky.franzusof?pnref=friends.search" target="_blank">
+                                <img src="https://crowdsale.storiqa.com/static/media/member-facebook.74d026a8.svg" alt="Facebook">
+                            </a>
+                        </div>
+                        <div class="name">Николай Французов</div>
+                        <div class="position">нейропсихолог, методолог</div>
+                        <div class="description text-left">
+                            Разработал и апробировал проектную форму работы по профориентации у подростков и программу профилактики и реабилитации зависимого
+                            поведения «Renovatio». В настоящее время создает научные методологии для новых когнитивных онлайн-тренажеров,
+                            курирует проведение научного исследования в отношении влияния когнитивных тренажеров на улучшение
+                            работы познавательных функций мозга. Консультирует группу разработчиков и дизайнеров относительно
+                            реализации тренажеров.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="percs container-fluid text-center py-5">
+            <div class="section-title d-flex justify-content-center">
+                <h1>Что даёт токен Викиум?</h1>
+            </div>
+            <div class="container">
+                <div class="row my-4">
+                    <div class="col col-12 col-lg-4 px-5 mb-4 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="150">
+                        <div class="perc-circle">
+                            <p class="m-0">
+                                <span style="font-weight: bold">СКИДКА</span>
+                                <br>
+                                <span style="font-weight: 100">до</span>
+                                <span style="font-size:175%">50%</span>
+                            </p>
+                            <i class="fas fa-shopping-basket fa-2x"></i>
+                        </div>
+                        <!-- <img class="img-fluid" src="images/discount-50.png" alt="test">                         -->
+                        <h4 class="py-2">На текущие продукты</h4>
+                        <p>
+                            Токен Викиум дает право на скидку до 50% на все текущие продукты Викиум.
+                        </p>
+                    </div>
+                    <div class="col col-12 col-lg-4 px-5 mb-4 d-flex flex-column align-items-center" data-aos="fade-up">
+                        <div class="perc-circle">
+                            <p class="m-0">
+                                <span style="font-weight: bold">СКИДКА</span>
+                                <br>
+                                <span style="font-weight: 100">до</span>
+                                <span style="font-size:175%">100%</span>
+                            </p>
+                            <i class="fas fa-graduation-cap fa-2x"></i>
+                        </div>
+                        <!-- <img class="img-fluid" src="images/discount-100-02.png" alt="test">                         -->
+                        <h4 class="py-2">На будущие продукты</h4>
+                        <p>
+                            Токен Викиум дает право на скидку до 100% на все будущие продукты Викиум.
+                        </p>
+                    </div>
+                    <div class="col col-12 col-lg-4 px-5 mb-4 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-delay="150">
+                        <div class="perc-circle">
+                            <p class="mt-4">ВЫПЛАТЫ</p>
+                            <i class="fas fa-dollar-sign fa-2x"></i>
+                        </div>
+                        <!-- <img class="img-fluid" src="images/money-02.png" alt="test">-->
+                        <h4 class="py-2">Топ-держателям</h4>
+                        <p>
+                            Викиум может совершать выплаты в одностороннем порядке держателям большого количества токенов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-12">
+                    <a class="w-btn" href="#invest" tabindex="0">INVEST</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="timetable container-fluid text-center py-5">
+            <div class="section-title d-flex justify-content-center">
+                <h1>График запуска проектов</h1>
+            </div>
+            <div class="section-title d-flex justify-content-center">
+                <p class="mb-5">Собранные в процессе ICO средства пойдут на дальнейшее развитие и маркетинг проекта</p>
+            </div>
+            <div class="row my-4 d-flex justify-content-center">
+                <div class="col col-xl-12 d-flex align-items-end justify-content-end justify-content-sm-center">
+                    <div class="card text-center text-white d-none d-xl-block m-2" data-aos="fade-up" data-aos-delay="250">
+                        <div class="card-body p-2">
+                            <ul class="list-group">
+                                <li class="list-group-item p-1">
+                                    Система позволяет
+                                    <br>тренировать SoftSkills</li>
+                                <li class="list-group-item p-1">
+                                    Система подстраивается
+                                    <br>под профессию</li>
+                                <li class="list-group-item p-1">$7M</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-dark">II полугодие 2018</div>
+                    </div>
+                    <div class="card text-center text-white d-none d-xl-block m-2" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-2">
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Тренировка состояний
+                                    <br>(НейроВикиум)</li>
+                                <li class="list-group-item p-1">$12M</li>
+                            </ul>
+                            <ul class="list-group">
+                                <li class="list-group-item p-1">
+                                    Система позволяет
+                                    <br>тренировать SoftSkills</li>
+                                <li class="list-group-item p-1">
+                                    Система подстраивается
+                                    <br>под профессию</li>
+                                <li class="list-group-item p-1">$7M</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-dark">I полугодие 2019</div>
+                    </div>
+                    <div class="card text-center text-white d-none d-xl-block m-2" data-aos="fade-up" data-aos-delay="150">
+                        <div class="card-body p-2">
+                            <ul class="list-group mb-2">
+                                <li class="list-group-item p-1">
+                                    Собственный
+                                    <br>нейроинтерфейс</li>
+                                <li class="list-group-item p-1">$20M</li>
+                            </ul>
+                            <ul class="list-group mb-2">
+                                <li class="list-group-item p-1">
+                                    Brain fitness
+                                    <br>тренер</li>
+                                <li class="list-group-item p-1">
+                                    Тренировка состояний
+                                    <br>(НейроВикиум)</li>
+                                <li class="list-group-item p-1">$12M</li>
+                            </ul>
+                            <ul class="list-group">
+                                <li class="list-group-item p-1">
+                                    Система позволяет
+                                    <br>тренировать SoftSkills</li>
+                                <li class="list-group-item p-1">
+                                    Система подстраивается
+                                    <br>под профессию</li>
+                                <li class="list-group-item p-1">$7M</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-dark">II полугодие 2019</div>
+                    </div>
+                    <div class="card text-center text-white d-none d-xl-block m-2" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-2">
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Помощь детям
+                                    <br>с СДВГ</li>
+                                <li class="list-group-item p-1">$30M</li>
+                            </ul>
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Оффлайн
+                                    <br>brain-fitness центры</li>
+                                <li class="list-group-item p-1">
+                                    Собственный
+                                    <br>нейроинтерфейс</li>
+                                <li class="list-group-item p-1">$20M</li>
+                            </ul>
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Brain fitness
+                                    <br>тренер</li>
+                                <li class="list-group-item p-1">
+                                    Тренировка состояний
+                                    <br>(НейроВикиум)</li>
+                                <li class="list-group-item p-1">$12M</li>
+                            </ul>
+                            <ul class="list-group">
+                                <li class="list-group-item p-1">
+                                    Система позволяет
+                                    <br>тренировать SoftSkills</li>
+                                <li class="list-group-item p-1">
+                                    Система подстраивается
+                                    <br>под профессию</li>
+                                <li class="list-group-item p-1">$7M</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-dark">I полугодие 2020</div>
+                    </div>
+                    <div class="card text-center text-white m-2" data-aos="fade-up" data-aos-delay="50">
+                        <div class="card-body p-2">
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Помощь в востановлении
+                                    <br>после инсульта</li>
+                                <li class="list-group-item p-1">
+                                    Помощь детям
+                                    <br>с СДВГ</li>
+                                <li class="list-group-item p-1">$30M</li>
+                            </ul>
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Оффлайн
+                                    <br>brain-fitness центры</li>
+                                <li class="list-group-item p-1">
+                                    Собственный
+                                    <br>нейроинтерфейс</li>
+                                <li class="list-group-item p-1">$20M</li>
+                            </ul>
+                            <ul class="list-group  mb-2">
+                                <li class="list-group-item p-1">
+                                    Brain fitness
+                                    <br>тренер</li>
+                                <li class="list-group-item p-1">
+                                    Тренировка состояний
+                                    <br>(НейроВикиум)</li>
+                                <li class="list-group-item p-1">$12M</li>
+                            </ul>
+                            <ul class="list-group">
+                                <li class="list-group-item p-1">
+                                    Система позволяет
+                                    <br>тренировать SoftSkills</li>
+                                <li class="list-group-item p-1">
+                                    Система подстраивается
+                                    <br>под профессию</li>
+                                <li class="list-group-item p-1">$7M</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer text-dark d-none d-xl-block">I полугодие 2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <a class="w-btn" href="#invest" tabindex="0">INVEST</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="directions container-fluid py-5">
+            <div class="section-title d-flex justify-content-center text-center" data-aos="fade-up">
+                <h1>Направления деятельности компании</h1>
+            </div>
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col col-12 col-lg-6">
+                        <div class="card mb-3" data-aos="zoom-in-up">
+                            <a class="card-img-top" href="../images/research.png" data-toggle="lightbox" data-type="image">
+                                <img class="card-img-top" src="../images/research-sm.png" alt="test">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">Исследования</h4>
+                                Компания Викиум самостоятельно и с помощью научного партнера центра тестирования «Гуманитарные Технологии» 
+                                основанного на базе МГУ проводит научные исследования в тематике когнитивных игр-тренажеров. “Викиум” 
+                                базируются на сочетании аналогов многочисленных отечественных и зарубежных методик в области психологии, 
+                                нейропсихологии, когнитивной, гештальт психологии, нейрофизиологии.
+                            </div>
+                            <div class="card-footer text-muted">
+                                Создали первый в России и СНГ нейротренажер с применением игрового контроллера и системы БОС ЭЭГ
+                            </div>
+                        </div>
+                        <div class="card mb-3" data-aos="zoom-in-up">
+                            <a class="card-img-top" href="../images/b2c.png" data-toggle="lightbox" data-type="image">
+                                <img class="card-img-top" src="../images/b2c-sm.png" alt="test">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">B2C</h4>
+                                Онлайн-платформа “Викиум” ориентирована на аудиторию 7+ лет и предоставляет обширные продуктовые 
+                                направления - когнитивные игры-тренажеры,  специализированные курсы, индивидуальную программу 
+                                развития на каждый день - для развития внимания, памяти, мышления и поддержания мозга в тонусе.
+                                <br>
+                                <br>С “Викиум” уже более 2 000 000 человек. Ежедневно пользователи занимаются на онлайн-платформе 
+                                с целью улучшить важные для личной эффективности в каждой сфере жизни качества, такие как широта 
+                                и гибкость ума, устойчивость внимания и воображение, словесно-логическая память. (выделенный текст 
+                                можно убрать, на его место поставить абзац ниже)
+                                <br>
+                                <br>Для активных и вовлеченных пользователей на онлайн-платформе реализованы соревнования. 
+                                Возможность сравнивать свои показатели конфиденциально с данными других пользователей по возрасту, 
+                                полу и территории проживания. Следить за динамикой развития посредством развернутой статистики.
+                                <br>
+                                <br>“Викиум” открыт для общения со своими пользователями и всеми заинтересованными в развитии. 
+                                Проводятся вебинары, где эксперты “Викиум” рассказывают о важных и актуальных темах в области 
+                                когнитивных тренировок и техник. Отвечают на вопросы аудитории.
+                            </div>
+                            <div class="card-footer text-muted">
+                                Сейчас Викиум входит в ТОП-2 веб-сервисов с когнитивными тренировками
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-6">
+                        <div class="card mb-3" data-aos="zoom-in-up">
+                            <a class="card-img-top" href="../images/neuro.png" data-toggle="lightbox" data-type="image">
+                                <img class="card-img-top" src="../images/neuro-sm.png" alt="test">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">Нейронаправление</h4>
+                                С 2015 года “Викиум” развивает и популяризирует в России новое прогрессивное направление ‑ 
+                                «Брейн-фитнес». В рамка которого разрабатывает комплексные системы (нейротренажеры) для развития 
+                                ментальных способностей человека - концентрация внимания и состояни сенсорного покоя.
+                                <br>
+                                <br>Нейротренажеры основаны на базе научных методик в области нейропсихологии и технологии БОС 
+                                (биологически обратной связи) с применением нейроинтерфейса, считывающего ЭЭГ (Электроэнцефалограмма) 
+                                и игрового контроллера. Для более полного погружения в тренировочный процесс применяются системы VR 
+                                и айтрекинга, отслеживающего движение глаз.
+                                <br>
+                                <br>Презентация первого нейротренажера состоялась на международном форуме «Открытые инновации 2015».
+                            </div>
+                            <div class="card-footer text-muted">
+                                Уже разработано 7 нейротренажеров в линейке
+                            </div>
+                        </div>
+                        <div class="card mb-3" data-aos="zoom-in-up">
+                            <a class="card-img-top" href="../images/b2b.png" data-toggle="lightbox" data-type="image">
+                                <img class="card-img-top" src="../images/b2b-sm.png" alt="test">
+                            </a>
+                            <div class="card-body">
+                                <h4 class="card-title">B2B</h4>
+                                Онлайн-платформа “Викиум” - инструмент для повышения эффективности и продуктивности сотрудников компаний. 
+                                С этой целью реализована программа тренировок для развития когнитивных навыков, присущих той или иной 
+                                специальности и должности. А также “кабинет тренера”, где руководитель или куратор подразделения может 
+                                отслеживать динамику развития каждого сотрудника.  
+                                <br>
+                                <br>Как внутрикорпоративное решение программа развития “Викиум” позволяет проводить оценку профессиональных 
+                                компетенций сотрудников, опираясь на данные их когнитивных навыков. На основе этого принимать решения 
+                                о приеме на работу или повышении кандидата.
+                                <br>
+                                <br>Реализована возможность проводить внутренние и отраслевые соревнования по когнитивным способностям 
+                                сотрудников, тренинги по применению когнитивных навыков в повседневной жизни, направленные на повышение 
+                                мотивации, вовлеченности сотрудников в личное, профессиональное и карьерное развитие.
+                                <br>
+                                <br>В перспективе интегрировать интерактивное решение с применением нейротехнологий для фиксирования 
+                                у сотрудников степень концентарции внимания и расслабления. Применять в области охраны труда и 
+                                безопасности для людей, работающих в сферах с высоким уровнем стресса и ответственностью.
+                            </div>
+                            <div class="card-footer text-muted">
+                                За последний год выручка увеличилась в 3 раза
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center text-center" data-aos="fade-up">
+                    <div class="col-12 mt-4">
+                        <a class="w-btn" href="#invest" tabindex="0">INVEST</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pie-section container-fluid py-5 text-center">
+            <div class="section-title d-flex justify-content-center" data-aos="fade-up">
+                <h1>The distribution of tokens</h1>
+            </div>
+            <div class="section-title d-flex justify-content-center" data-aos="fade-up">
+                <p class="mb-5">Collected during the ICO funds will be used for further development and marketing of the project</p>
+            </div>
+            <div class="row example-split d-flex justify-content-center" data-aos="fade-up">
+                <div class="col-sm-12 col-md-9 col-lg-7">
+                    <canvas id="tokenChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="media-section container-fluid py-5">
+            <div class="d-flex justify-content-center text-center" data-aos="fade-up">
+                <h1>关于我们他们写和说：</h1>
+            </div>
+            <div class="row d-flex justify-content-center my-5 py-4" data-aos="fade-up">
+                <div class="col-12">
+                    <div class="press d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <div class="item item-4"></div>
+                        <div class="item item-5"></div>
+                        <div class="item item-1"></div>
+                        <div class="item item-2"></div>
+                        <div class="item item-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center text-center" data-aos="fade-up">
+                <div class="col-12 mt-1">
+                    <a class="w-btn" href="#invest" tabindex="0">投资</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="smart-contract container-fluid py-5 text-center">
+            <div class="d-flex justify-content-center" data-aos="fade-up">
+                <h1>智能合约Github</h1>
+            </div>
+            <div class="d-flex justify-content-center" data-aos="fade-up">
+                <p class="description mb-5">
+                    我们在Github上发布我们的源代码，因为我想诚实并开放。
+                </p>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-12" data-aos="fade-up">
+                    <img src="https://crowdsale.storiqa.com/static/media/github_992.9cb96083.png" alt="Demand" class="mw-100">
+                </div>
+                <div class="col-12 mt-5" data-aos="fade-up">
+                    <a class="w-btn" href="https://github.com/Storiqa/ico_smart_contract" tabindex="0" target="_blank">代码在Github上</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="invest-section container-fluid py-5 text-center" id="invest">
+            <div class="section-title d-flex justify-content-center text-center" data-aos="fade-up">
+                <h1>投资</h1>
+            </div>
+            <div class="section-title d-flex justify-content-center text-center" data-aos="fade-up">
+                <p>
+                    我们只会接受以太，所以你自己可以选择如何获得它。
+                </p>
+            </div>
+            <div class="container">
+                <div class="row my-4 pt-3">
+                    <div class="col col-12 col-lg-6 mb-3" data-aos="zoom-in-up">
+                        <div class="calculator card text-left h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">投资：</h5>
+                                <div class="input-group input-group-lg mb-2">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fab fa-ethereum fa-lg fa-fw"></i>
+                                            ETH
+                                        </span>
+                                    </div>
+                                    <input type="number" id="eth-input" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary border" type="button" data-toggle="clearCalc">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-lg mb-2">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="fas fa-dollar-sign fa-lg fa-fw"></i>
+                                            USD
+                                        </span>
+                                    </div>
+                                    <input type="number" id="usd-input" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary border" type="button" data-toggle="clearCalc">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="alert alert-success text-center collapse" id="currentDiscount" role="alert">
+                                    折扣：<strong></strong>
+                                </div>
+                                <h5 class="card-title mt-4">要获得：</h5>
+                                <div class="input-group input-group-lg">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success border-success text-light">
+                                            Wiki-tokens</span>
+                                    </div>
+                                    <input type="number" id="token-input" class="form-control is-valid" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-success" type="button" data-toggle="clearCalc">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted text-center">要计算开始在任何字段输入一个数字</div>
+                        </div>
+                    </div>
+                    <div class="col col-12 col-lg-6 mb-3" data-aos="zoom-in-up">
+                        <div class="card text-center h-100">
+                            <div class="card-body d-flex flex-column">
+                                <i class="fab fa-ethereum fa-6x text-secondary m-auto"></i>
+                                <h5 class="card-title my-3">解决智能合约</h5>
+                                <div class="list-group text-center">
+                                    <div class="list-group-item text-muted" id="smart-address">0xf230b790E05390FC8295F4d3F60332c93BEd42e2</div>
+                                    <button type="button" class="list-group-item list-group-item-action" id="copy-smart-address"
+                                        style="cursor: pointer;" data-toggle="tooltip" data-placement="top">
+                                        复制</button>
+                                </div>
+                            </div>
+                            <div class="card-footer text-muted text-center">用来购买</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container-fluid footer">
+        <div class="container">
+            <div class="row justify-content-center py-3">
+                <div class="col-md-4">
+                    <p class="">
+                        Phone:
+                        <a href="tel:+74951338663">
+                            <u>+7 (495) 133-86-63</u>
+                        </a>
+                        <br> from 10:00 to 19:00
+                    </p>
+                    <p class="">© Wikium 2013 - 2018</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="/start">
+                        <img class="ml-3" src="../images/pdf.png" alt="">
+                        <br>
+                        <u>White paper</u>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="CalcModalCenter" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="CalcModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="calculator modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            <i class="fas fa-times-circle"></i>
+                        </span>
+                    </button>
+                    <h5 class="card-title mt-2">投资：</h5>
+                    <div class="input-group input-group-lg mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fab fa-ethereum fa-lg fa-fw"></i>
+                                ETH
+                            </span>
+                        </div>
+                        <input type="number" id="eth-input-modal" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary border" type="button" data-toggle="clearCalc">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-group input-group-lg mb-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-dollar-sign fa-lg fa-fw"></i>
+                                USD
+                            </span>
+                        </div>
+                        <input type="number" id="usd-input-modal" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary border" type="button" data-toggle="clearCalc">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="alert alert-success text-center collapse" role="alert" id="currentDiscount-modal">
+                        折扣：<strong></strong>
+                    </div>
+                    <h5 class="card-title mt-4">要获得：</h5>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-success border-success text-light">
+                                Wiki-tokens</span>
+                        </div>
+                        <input type="number" id="token-input-modal" class="form-control is-valid" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-success" type="button" data-toggle="clearCalc">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="w-100 text-muted text-center">在任何字段中输入一个数字进行计算</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/solid.js" integrity="sha384-P4tSluxIpPk9wNy8WSD8wJDvA8YZIkC6AQ+BfAFLXcUZIPQGu4Ifv4Kqq+i2XzrM"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/brands.js" integrity="sha384-qJKAzpOXfvmSjzbmsEtlYziSrpVjh5ROPNqb8UZ60myWy7rjTObnarseSKotmJIx"
+            crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/fontawesome.js" integrity="sha384-2IUdwouOFWauLdwTuAyHeMMRFfeyy4vqYNjodih+28v2ReC+8j+sLF9cK339k5hY"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" 
+            crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels'></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <script src='../ch/main.js'></script>
+</body>
+
+</html>

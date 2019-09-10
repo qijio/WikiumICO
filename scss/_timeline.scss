@@ -1,0 +1,100 @@
+.timetable{    
+    .card-body {
+        &>.list-group {
+            position: relative;
+            box-sizing: border-box;
+            &:nth-last-child(1) {
+                &>.list-group-item {
+                    background-color: $timeLineBgColor1;
+                    &:nth-last-child(1){ 
+                        @extend %moneyBlock;
+                        background-color: darken($timeLineBgColor1, 10%) 
+                    }
+                    &:nth-last-child(2):before {
+                        @extend %before;
+                        content: 'Q2 2018';
+                    }
+                }
+            }
+            &:nth-last-child(2) {
+                &>.list-group-item {
+                    background-color: $timeLineBgColor2;
+                    &:nth-last-child(1){ 
+                        @extend %moneyBlock;
+                        background-color: darken($timeLineBgColor2, 10%) 
+                    }
+                    &:nth-last-child(2):before {
+                        @extend %before;
+                        content: 'Q1 2019';
+                    }
+                    &:nth-last-child(3):before {
+                        @extend %before;
+                        content: 'Q2 2019';
+                    }
+                }
+            }
+            &:nth-last-child(3) {
+                &>.list-group-item {
+                    background-color: $timeLineBgColor3;
+                    &:nth-last-child(1){ 
+                        @extend %moneyBlock;
+                        background-color: darken($timeLineBgColor3, 10%) 
+                    }
+                    &:nth-last-child(3):before {
+                        @extend %before;
+                        content: 'Q1 2020';
+                    }
+                }
+            }
+            &:nth-last-child(4) {
+                &>.list-group-item {
+                    background-color: $timeLineBgColor4;
+                    &:nth-last-child(1){ 
+                        @extend %moneyBlock;
+                        background-color: darken($timeLineBgColor4, 10%) 
+                    }
+                    &:nth-last-child(3):before {
+                        @extend %before;
+                        content: 'Q2 2020';
+                    }
+                }
+            }
+            &>.list-group-item {
+                position: relative;
+                transition: all .2s ease-in-out;
+                &:hover {
+                    filter: brightness(110%);
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .list-group-item:before {
+            display: none;
+        }
+    }
+    @media (max-width: 1200px) {
+        .list-group-item {
+            pointer-events: none;
+        }
+    }
+    
+    %before {
+    position: absolute;
+    pointer-events: none;
+    left: -50%;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    color: black;
+    border-bottom: 1px dotted black;
+    font-weight: normal;
+    text-align: left;
+    }
+
+    %moneyBlock {
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}

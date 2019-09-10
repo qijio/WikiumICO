@@ -1,0 +1,256 @@
+.roadmap-section {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background: url(../images/road_b.png) no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #3D4351;
+        margin-top: 0;
+    }
+    a {
+        color: #2eb6f7;
+        &:hover {
+            color: #fd8585;
+            text-decoration: none;
+        }
+    }
+    .split-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .example-header {
+        background: #3D4351;
+        color: #FFF;
+        font-weight: 300;
+        padding: 3em 1em;
+        text-align: center;
+        h1 {
+            color: #FFF;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+    }
+    .container-fluid .row {
+        padding: 0 0 4em 0;
+    }
+    .example-title {
+        text-align: center;
+        margin-bottom: 60px;
+        padding: 3em 0;
+        border-bottom: 1px solid #E4EAEC;
+        ~p {
+            margin: 0 auto;
+            font-size: 16px;
+            max-width: 400px;
+        }
+    }
+    .timeline-new {
+        line-height: 1.4em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            line-height: inherit;
+        }
+    }
+    .timeline-item {
+        padding-left: 40px;
+        position: relative;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .timeline-info {
+        position: relative;
+        top: 1px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin: 0 0 .5em 0;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .timeline-marker {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 15px;
+        .before {
+            background: #2eb6f7;
+            border: 3px solid transparent;
+            border-radius: 100%;
+            display: block;
+            height: 15px;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            width: 15px;
+            transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+        .after {
+            width: 3px;
+            background: #2eb6f7;
+            display: block;
+            position: absolute;
+            top: 18px;
+            bottom: -6px;
+            left: 6px;
+        }
+    }
+    .timeline-item:not(.period):hover .timeline-marker.before {
+        background: transparent;
+        border: 3px solid #2eb6f7;
+    }
+    .timeline-content {
+        position: relative;
+        top: 0;
+        padding-bottom: 24px;
+        ul {
+            padding: 0 0 20px 20px;
+            font-size: 14px;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-title {
+            position: relative;
+            top: -1px;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 10px;
+            &.flag {
+                position: relative;
+                color: #fff;
+                font-weight: normal;
+                left: 6px;
+                width: 150px;
+                height: 40px;
+                padding-left: 23px;
+                line-height: 40px;
+                background: linear-gradient(90deg, #03a9f4 0%, #3dc0fa 96%);
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 20px;
+                    right: -20px;
+                    display: block;
+                    border: 20px solid transparent;
+                    border-top: 20px solid #3dc0fa;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -20px;
+                    top: -20px;
+                    display: block;
+                    border: 20px solid transparent;
+                    border-bottom: 20px solid #3dc0fa;
+                }
+            }
+        }
+    }
+    .period {
+        padding: 0;
+        .timeline-info {
+            display: none;
+        }
+        .timeline-marker {
+            .before {
+                background: transparent;
+                width: 15px;
+                height: auto;
+                border: none;
+                border-radius: 0;
+                top: 0;
+                bottom: 30px;
+                position: absolute;
+            }
+            .after {
+                height: 32px;
+                top: auto;
+            }
+        }
+        .timeline-content .timeline-title {
+            margin: 0;
+        }
+    }
+    .period-start .timeline-marker .before {
+        border-top: 0;
+    }
+    .timeline-split {
+        margin-top: 70px;
+    }
+    .marker-outline {
+        .timeline-marker .before {
+            background: transparent;
+            border-color: #2eb6f7;
+        }
+        .timeline-item:hover .timeline-marker.before {
+            background: #2eb6f7;
+        }
+    }
+}
+
+.timeline-item:last-child .roadmap-section .timeline-marker:after {
+    content: none;
+}
+
+@media (max-width: 1500px) {
+    .roadmap-section {
+        background-image: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .roadmap-section .timeline-split {
+        .timeline-new {
+            display: table;
+        }
+        .timeline-item {
+            display: table-row;
+            padding: 0;
+        }
+        .timeline-info,
+        .timeline-marker,
+        .timeline-content,
+        .period .timeline-info {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .timeline-marker {
+            position: relative;
+        }
+        .timeline-content {
+            padding-left: 15px;
+        }
+        .timeline-info {
+            text-align: right;
+            padding-right: 13px;
+        }
+        .period .timeline-title {
+            position: relative;
+            left: -24px;
+        }
+    }
+}

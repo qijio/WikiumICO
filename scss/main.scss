@@ -1,0 +1,158 @@
+@import "variables";
+@import "header";
+@import "roadMap";
+@import "teamSection";
+@import "mediaSection";
+@import "perks";
+@import "timeline";
+@import "investSection";
+
+
+@font-face {
+    font-family: 'Museo Sans 100 Thin';
+    src: url('../fonts/MuseoSansCyrl-100.eot');
+    src: url('../fonts/MuseoSansCyrl-100.eot?#iefix') format("embedded-opentype"), 
+         url('../fonts/MuseoSansCyrl-100.woff') format("woff"), 
+         url('../fonts/MuseoSansCyrl-100.ttf') format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Museo Sans 900 Black';
+    src: url('../fonts/MuseoSansCyrl-900.eot');
+    src: url('../fonts/MuseoSansCyrl-900.eot?#iefix') format("embedded-opentype"), 
+            url('../fonts/MuseoSansCyrl-900.woff') format("woff"), 
+            url('../fonts/MuseoSansCyrl-900.ttf') format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: $defaultFontFamily;
+    .navbar {
+        transition: background-color 150ms linear;
+        .logo {
+            width: 150px;
+            margin: 0 auto;
+            transition: all 0.3s;
+        }
+    }
+    .particles-js-canvas-el {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0.22;
+        pointer-events: none;
+        animation: fadein 1s;
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 0.22; }
+        }
+    }
+    .bg {
+        grid-column: 1;
+        grid-row: 1;
+        z-index: -15;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-image: linear-gradient(115deg, #6039aa, #1c1e33);
+    }
+    main>section:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .footer {
+        color: #fff;
+        background-color: #6039aa;
+        background-image: linear-gradient(95deg, #6039aa, #1c1e33);
+        a {
+            color: #fff;
+            text-decoration: none;
+            u {
+                border-bottom: 1px dotted #fff;
+                text-decoration: none;
+                &:hover {
+                    border-bottom-style: solid;
+                }
+            }
+        }
+    }
+    .bs-tooltip-bottom{
+        .tooltip-inner {
+            color: #000;
+            background-color: #fff;
+        }
+        .arrow::before {
+            border-bottom-color: #fff;
+        }
+    }
+}
+
+.w-btn {
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    outline: none;
+    padding: 16px 56px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .5px;
+    border-radius: 50px;
+    background-color: $wBtnBgColor;
+    transition: all .2s ease-in-out, box-shadow .2s ease-in-out;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+        color: #fff;
+        text-decoration: inherit;
+        background-color: lighten($wBtnBgColor, 10%);
+        box-shadow: 0 6px 16px 0 rgba(0, 0, 0, .2);
+        transform: translateY(-1px);
+    }
+    &:active {
+        color: #fff;
+        text-decoration: inherit;
+        transform: none;
+        box-shadow: none;
+        background-color: darken($wBtnBgColor, 5%);
+        transition: transform .1s ease-in-out, box-shadow .1s ease-in-out;
+    }
+}
+
+@media (max-width: 370px) {
+    body .navbar .logo {
+        width: 110px;
+    }
+    body main .timetable .row .col {
+        margin-right: -70px;
+        transform: scale(0.8);
+    }
+    body .perc-circle {
+        transform: scale(0.8);
+    }
+    .invest-section, .invest-section .row{
+        padding-left: 5px;
+        padding-right: 5px;
+        .col{
+            padding: 0;
+            .calculator .card-body{
+                padding: 10px;
+            }
+        }
+    }
+}
